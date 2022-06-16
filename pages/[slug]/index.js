@@ -1,12 +1,8 @@
 import React from "react";
-// import { slug } from "github-slugger";
-// import fs from "fs";
-// import path from "path";
-// import matter from "gray-matter";
+
 import { getAlltag } from "../../lib/post";
 
 const Post = ({ post }) => {
-  console.log(post);
   return (
     <div>
       <h1>{post.name}</h1>
@@ -22,7 +18,7 @@ export async function getStaticPaths() {
       slug: d,
     },
   }));
-  console.log(paths);
+
   return { paths, fallback: false };
 }
 
